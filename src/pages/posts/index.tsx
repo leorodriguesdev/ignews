@@ -32,12 +32,14 @@ export default function Posts({ posts }: PostsProps) {
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map(post => (
-            <Link key={post.uid} href={`/posts/${post.uid}`}>
-              <a className={styles.post}>
-                <time>{post.first_publication_date}</time>
-                <strong>{post.data.title}</strong>
-                <p>{post.data.subtitle}</p>
-              </a>
+            <Link 
+              key={post.uid} 
+              href={`/posts/${post.uid}`}
+              className={styles.post}
+            >
+              <time>{post.first_publication_date}</time>
+              <strong>{post.data.title}</strong>
+              <p>{post.data.subtitle}</p>
             </Link>
           ))}
         </div>

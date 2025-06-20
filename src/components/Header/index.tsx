@@ -11,15 +11,17 @@ export function Header() {
             <div className={styles.headerContent}>
                 <img src="/images/logo.svg" alt="ig.news" />
                 <nav>
-                    <Link href="/">
-                        <a className={router.pathname === '/' ? styles.active : ''}>
-                            Home
-                        </a>
+                    <Link 
+                        href="/"
+                        className={router.pathname === '/' ? styles.active : ''}
+                    >
+                        Home
                     </Link>
-                    <Link href="/posts">
-                        <a className={router.pathname.startsWith('/posts') ? styles.active : ''}>
-                            Posts
-                        </a>
+                    <Link 
+                        href="/posts"
+                        className={router.pathname.startsWith('/posts') ? styles.active : ''}
+                    >
+                        Posts
                     </Link>
                 </nav>
                 <SignInButton/>
