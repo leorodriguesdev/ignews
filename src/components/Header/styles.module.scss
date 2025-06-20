@@ -1,6 +1,10 @@
 .headerContainer {
     height: 5rem;
     border-bottom: 1px solid var(--gray-800);
+    
+    @media (max-width: 768px) {
+        height: 4rem;
+    }
 }
 
 .headerContent {
@@ -12,9 +16,28 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: 768px) {
+        height: 4rem;
+        padding: 0 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0 0.75rem;
+    }
+
     nav {
         margin-left: 5rem;
         height: 5rem;
+        
+        @media (max-width: 768px) {
+            margin-left: 2rem;
+            height: 4rem;
+        }
+        
+        @media (max-width: 480px) {
+            margin-left: 1rem;
+        }
+        
     a {
         display: inline-block;
         position: relative;
@@ -25,8 +48,22 @@
 
         transition: color 0.2s;
 
+        @media (max-width: 768px) {
+            height: 4rem;
+            line-height: 4rem;
+            padding: 0 0.25rem;
+        }
+
         & + a {
             margin-left: 2rem;
+            
+            @media (max-width: 768px) {
+                margin-left: 1rem;
+            }
+            
+            @media (max-width: 480px) {
+                margin-left: 0.5rem;
+            }
         }
 
         &:hover {
@@ -48,12 +85,22 @@
             left: 0;
             background: var(--yellow-500);
         }
-
-
-        }
+    }
     }
 
     button { 
         margin-left: auto;
+        
+        @media (max-width: 480px) {
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+    
+    img {
+        @media (max-width: 480px) {
+            height: 2rem;
+            width: auto;
+        }
     }
 }
